@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <script src="script.js" defer></script>
   <script src="https://kit.fontawesome.com/4d915a6e08.js" crossorigin="anonymous"></script>
 </head>
@@ -36,7 +37,10 @@
         </div>
         <div class="about-col-2">
           <h2 class="sub-title">About Me</h2>
-          <p id="about-me">Hi! My name is Ethan Liu and I am currently a junior at Northeastern studying Computer Engineering and Computer Science. I am passionate about Software Development and strive to improve my skills every day. My hobbies include playing video games, biking, and making videos.</p>
+          <p id="about-me">
+            Hi! My name is Ethan Liu and I am currently a senior at Northeastern studying Computer 
+            Engineering and Computer Science. From a young age, I loved the process of building new things and seeing
+            creations to completion. During my free time, I enjoy biking, baking, gaming, and video editing</p>
           <div class="tab-titles">  
             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
             <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -48,24 +52,46 @@
               <li>Data Structures and Algorithms</li>
               <li>Database Design</li>
               <li>Amazon Web Services</li>
+              <li>Unit Testing</li>
+              <li>Responsive Design</li>
+              <li>Agile Development</li>  
             </ul>
           </div>
           <div class="tab-contents" id="experience">
             <ul>
-              <li><span>2023</span> <br> Intern at Hudl</li>
-              <li><span>2022</span> <br> Coop at Charles River Development</li>
+              <li><span>2023</span> <br> Software Engineer Intern at UKG</li>
+              <li><span>2023</span> <br> Software Engineer Intern at Hudl</li>
+              <li><span>2022</span> <br> Risk Management Coop at Charles River Development</li>
               <li><span>2021</span> <br> Researcher at Northeastern University</li>
-              <li><span>2018</span> <br> Intern at Eversource Energy</li>
+              <li><span>2018</span> <br> Community Relations Intern at Eversource Energy</li>
             </ul>
           </div>
           <div class="tab-contents" id="education">
             <ul>
-              <li><span>2014 - 2020</span> <br> Boston Latin School</li>
               <li><span>2020 - Current</span> <br> Northeastern University</li>
+              <li><span>2014 - 2020</span> <br> Boston Latin School</li>
             </ul>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div id="languages">
+    <div class="container">
+      <h3 class="sub-title">Technologies</h3>
+        <div class="tech-container">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" />
+
+        </div>
     </div>
   </div>
   <div id="portfolio">
@@ -90,7 +116,6 @@
       </div>
     </div>
   </div>
-
   <div id="contact">
     <div class="container">
       <div class="contact-left">
@@ -102,7 +127,7 @@
           <a href="https://www.linkedin.com/in/ethanliu50/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://www.instagram.com/ethan.liuu/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
         </div>
-        <a href="../../Downloads/Ethan Liu - Resume.pdf" download="Ethan Liu - Resume"class="btn btn2">Download CV</a>
+        <a href="./documents/Ethan_Liu_Resume.pdf" download="Ethan_Liu_Resume.pdf"class="btn btn2" target="_blank" rel="noopener noreferrer">Download CV</a>
       </div>
       <div class="contact-right">
         <form name="submit-to-google-sheet">

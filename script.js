@@ -37,3 +37,31 @@ form.addEventListener('submit', e => {
   })
   .catch(error => console.error('Error!', error.message))
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+  const icons = document.querySelectorAll('.tech-container img');
+
+  icons.forEach(icon => {
+    const randomDuration = getRandomNumber(2, 5); 
+    const randomDelay = getRandomNumber(0, 2);
+    const randomTranslation = getRandomNumber(5, 20); 
+
+    icon.style.animationDuration = `${randomDuration}s`;
+    icon.style.animationDelay = `-${randomDelay}s`; 
+    icon.style.animationName = `floating${Math.floor(Math.random() * 100)}`; 
+
+    // Define the dynamic keyframes
+    const dynamicKeyframes = `
+      0% { transform: translate(0, 0px); }
+      50% { transform: translate(0, ${randomTranslation}px); }
+      100% { transform: translate(0, 0px); }
+    `;
+
+    const styleSheet = document.styleSheets[0];
+    styleSheet.insertRule(`@keyframes ${icon.style.animationName} {${dynamicKeyframes}}`, styleSheet.cssRules.length);
+  });
+
+  function getRandomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+});

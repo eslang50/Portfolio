@@ -22,7 +22,7 @@ body {
 }
 
 .sub-title {
-  font-size: 45px;
+  font-size: 50px;
 }
 
 #logo {
@@ -49,7 +49,7 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 23px;
   position: relative;
 }
 
@@ -88,6 +88,7 @@ nav ul li a:hover::after {
   flex-wrap: wrap;
 }
 
+
 .about-col-1 {
   flex-basis: 35%;
 }
@@ -113,7 +114,7 @@ h2 {
 
 .tab-links {
   margin-right: 50px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -137,11 +138,12 @@ h2 {
 .tab-contents ul li {
   list-style: none;
   margin: 10px 0;
+  font-size: 18px;
 }
 
 .tab-contents ul li span {
   color: #ff004f;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .tab-contents {
@@ -158,6 +160,7 @@ h2 {
 
 #portfolio {
   padding: 40px 0;
+  padding-top: 20px;
 }
 
 .project-list {
@@ -276,6 +279,20 @@ form input, form textarea {
 
 nav .fa-solid {
   display: none;
+}
+
+#languages .container img {
+  height: 5em;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.tech-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;  
 }
 
 @media only screen and (max-width:600px){
