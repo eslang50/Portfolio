@@ -13,6 +13,7 @@ html {
 body {
   background: #080808;
   color: #fff;
+  overflow-x: hidden;
 }
 
 #header {
@@ -27,6 +28,7 @@ body {
 
 #logo {
   width: 15%;
+  cursor: pointer;
 }
 
 .container {
@@ -71,6 +73,10 @@ nav ul li a:hover::after {
 .header-text {
   margin-top: 15%;
   font-size: 30px;
+}
+
+h1 {
+  margin-bottom: 25%;
 }
 
 #pfp {
@@ -281,6 +287,10 @@ nav .fa-solid {
   display: none;
 }
 
+#languages {
+  margin: 5% 0;
+}
+
 #languages .container img {
   height: 5em;
   animation-name: floating;
@@ -293,6 +303,94 @@ nav .fa-solid {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;  
+  flex-wrap: wrap;
+}
+
+.plane {
+  position: relative;
+  left:100px;
+  top:250px;
+  animation: flyIn 4s linear forwards;
+}
+
+@keyframes flyIn {
+  0% {
+    transform: translateX(0%) scale(1);
+  }
+  25% {
+    transform: translateX(25%) rotateX(20deg);
+  }
+  50% {
+    transform: translateX(50%) rotateX(0) translateY(100px) ;
+  }
+  75% {
+    transform: translateX(75%) rotateX(-20deg) translateY(190px) ;
+  }
+  100% {
+    transform: translateX(100%) rotateX(0) translateY(300px);
+  }
+}
+
+.wingRight {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 22.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 115px solid white;
+  transform: rotate(61deg); 
+  z-index:4;
+}
+
+.bottom {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 25.5px solid #676d70;
+  top: 71px;
+  transform: rotate(-5deg);
+  left:-52.5px;
+  z-index:3;
+}
+
+.top {
+  position:absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 30px solid #c1c7c9;
+  top: 65px;
+  transform: rotate(5deg);
+  left:-60px;
+  z-index:1;
+}
+
+.middle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 135px solid #c1c7c9;
+  top: -13.5px;
+  transform: rotate(72deg);
+  left:-7.5px;
+  z-index:2;
+}
+
+.wingLeft {
+  position: absolute; 
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-bottom: 135px solid white;
+  transform: rotate(78deg) skewY(-35deg); 
+  left:-18.5px;
+  z-index:3;
+  top:-30px;
 }
 
 @media only screen and (max-width:600px){

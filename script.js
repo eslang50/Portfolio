@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
     icon.style.animationDelay = `-${randomDelay}s`; 
     icon.style.animationName = `floating${Math.floor(Math.random() * 100)}`; 
 
-    // Define the dynamic keyframes
     const dynamicKeyframes = `
       0% { transform: translate(0, 0px); }
       50% { transform: translate(0, ${randomTranslation}px); }
@@ -65,3 +64,5 @@ document.addEventListener('DOMContentLoaded', function () {
     return Math.random() * (max - min) + min;
   }
 });
+
+document.getElementById('logo').addEventListener('click', () => {location.reload()})
