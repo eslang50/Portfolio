@@ -4,11 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+  name="description"
+  content="Ethan's portfolio showcasing his personal story and professional achievments in software engineering!">
   <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <script src="script.js" defer></script>
+  <script src="script.js" type="module" defer></script>
   <script src="https://kit.fontawesome.com/4d915a6e08.js" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "DZLbeKkR5RDUgeMP8",
+        });
+    })();
+  </script>
 </head>
 <body>
   <div class="paperplane">
@@ -23,12 +36,12 @@
   <div id="header">
     <div class="container">
       <nav>
-        <img src="./images/logo.png" alt="logo" id="logo" > 
+        <img src="./images/logo.png" alt="Ethan's logo" id="logo" > 
         <ul id="side-menu">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a aria-label="Link to home page of portfolio" href="#header">Home</a></li>
+          <li><a aria-label="Link to about section of portfolio" href="#about">About</a></li>
+          <li><a aria-label="Link to project section of portfolio" href="#portfolio">Portfolio</a></li>
+          <li><a aria-label="Link to contact section of portfolio" href="#contact">Contact</a></li>
           <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -41,7 +54,7 @@
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="./images/pfp.jpg" alt="" id="pfp">
+          <img src="./images/pfp.jpg" alt="profile picture" id="pfp" loading="lazy">
         </div>
         <div class="about-col-2">
           <h2 class="sub-title">About Me</h2>
@@ -94,71 +107,71 @@
   <div id="languages">
     <div class="container">
       <h3 class="sub-title">Technologies</h3>
-        <div class="tech-container">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" />
-        </div>
+      <div class="tech-container">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" alt="Node.js logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo"  />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" alt="Python logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" alt="HTML5 logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" alt="CSS3 logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" alt="Storybook logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" alt="Electron logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" alt="Docker logo" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js logo" />
+      </div>
     </div>
   </div>
-  <div id="portfolio">
+  <div id="portfolio">  
     <div class="container">
       <h3 class="sub-title">My Projects</h3>
       <div class="project-list">
         <div class="project">
-          <a href="https://github.com/eslang50/chart-app" target="_blank">
+          <a aria-label="Link to blog app" href="https://github.com/eslang50/blogApp" target="_blank">
             <div class="image-container">
-              <img src="./images/blogSS.png" alt="">
+              <img src="./images/blogSS.png" loading="lazy" alt="Blog app screenshot">
               <div class="overlay-text">Blog app built with MongoDB, Express, React, and Node.js</div>
             </div>
           </a>
         </div>
         <div class="project">
-          <a href="https://github.com/eslang50/chart-app" target="_blank">
+          <a aria-label="Link to chart app" href="https://github.com/eslang50/chart-app" target="_blank">
             <div class="image-container">
-              <img src="./images/chartApp.png" alt="">
+              <img src="./images/chartApp.png" loading="lazy" alt="Chart app screenshot">
               <div class="overlay-text">Chart visualization app built with Next.js, Django, and Docker</div>
             </div>
           </a>
         </div>
         <div class="project">
-          <a href="https://eslang50.github.io/Todo-List/" target="_blank">
+          <a aria-label="Link to to do list app" href="https://eslang50.github.io/Todo-List/" target="_blank">
             <div class="image-container">
-              <img src="./images/ToDo-List.png" alt="">
+              <img src="./images/ToDo-List.png" loading="lazy" alt="To do list app screenshot">
               <div class="overlay-text">To do list app built with vanilla js, html, css</div>
             </div>
           </a>
         </div>
         <div class="project">
-          <a href="https://compound-sign-up.vercel.app/" target="_blank">
+          <a aria-label="Link to compound app" href="https://compound-sign-up.vercel.app/" target="_blank">
             <div class="image-container">
-              <img src="./images/compound.png" alt="">
+              <img src="./images/compound.png" loading="lazy" alt="Compound app screenshot">
               <div class="overlay-text">Investing app built with React, html, css</div>
             </div>
           </a>
         </div>
         <div class="project">
-          <a href="https://github.com/eslang50/BudgetApp" target="_blank">
+          <a aria-label="Link to budget app" href="https://github.com/eslang50/BudgetApp" target="_blank">
             <div class="image-container">
-              <img src="images/BudgetApp.png" >
+              <img src="images/BudgetApp.png" loading="lazy" alt="Budget app screenshot" >
               <div class="overlay-text">Budget app built with Java and JavaFX</div>
             </div>
           </a>
         </div>
         <div class="project">
-          <a href="https://eslang50.github.io/Weather-App/" target="_blank">
+          <a aria-label="Link to weather app" href="https://eslang50.github.io/Weather-App/" target="_blank">
             <div class="image-container">
-              <img src="images/weatherApp.png" >
+              <img src="images/weatherApp.png" loading="lazy" alt="Weather app screenshot" >
               <div class="overlay-text">Weather app built with vanilla js, html, css, and OpenWeather API</div>
             </div>
           </a>
@@ -169,22 +182,28 @@
   <div id="contact">
     <div class="container">
       <div class="contact-left">
-        <h5 class="sub-title">Contact Me</h5>
+        <h4 class="sub-title">Contact Me</h4>
         <p><i class="fa-solid fa-paper-plane"></i>ethanliu50@gmail.com</p>
         <p><i class="fa-solid fa-phone"></i>857-217-2467</p>
         <div class="social-icons">
-          <a href="https://github.com/eslang50" target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/ethanliu50/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/ethan.liuu/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+          <a aria-label="Link to ethan's github" href="https://github.com/eslang50" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a aria-label="Link to ethan's linkedin" href="https://www.linkedin.com/in/ethanliu50/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a aria-label="Link to ethan's instagram" href="https://www.instagram.com/ethan.liuu/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
         </div>
         <a href="./documents/Ethan_Liu_Resume.pdf" download="Ethan_Liu_Resume.pdf"class="btn btn2" target="_blank" rel="noopener noreferrer">Download CV</a>
       </div>
       <div class="contact-right">
         <form name="submit-to-google-sheet">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="Email" placeholder="Your Email" required>
-          <textarea name="Message" rows="6"></textarea>
-          <button type="submit" id="submit-btn">Submit</button>
+          <label for="name">
+            <input type="text" name="Name" id='name' placeholder="Your Name" required>
+          </label>
+          <label for="email">
+            <input type="email" name="Email" id="email" placeholder="Your Email" required>
+          </label>
+          <label for="message">
+            <textarea name="Message" rows="6" id="message" placeholder="Type a message"></textarea>
+          </label>
+          <button id="submit-btn" >Submit</button>
         </form>
         <span id="msg"></span>
       </div>
