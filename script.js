@@ -74,3 +74,37 @@ function closemenu() {
 document.getElementById('logo').addEventListener('click', () => {
   location.reload();
 });
+
+const roles = ["Software Developer", "Triathlete", "Business Owner", "Baker", "Video Editor"];
+const typewriterElement = document.querySelector('.typewriter');
+
+let currentIndex = 0;
+
+function typeRole(role) {
+  typewriterElement.textContent = ''; // Clear the text
+  let i = 0;
+  const typingInterval = setInterval(() => {
+    typewriterElement.textContent += role[i];
+    i++;
+    if (i === role.length) {
+      clearInterval(typingInterval);
+      setTimeout(() => eraseRole(), 2000); 
+    }
+  }, 100);
+}
+
+function eraseRole() {
+  const currentRole = typewriterElement.textContent;
+  let i = currentRole.length;
+  const erasingInterval = setInterval(() => {
+    typewriterElement.textContent = currentRole.substring(0, i - 1);
+    i--;
+    if (i === 0) {
+      clearInterval(erasingInterval);
+      currentIndex = (currentIndex + 1) % roles.length; 
+      typeRole(roles[currentIndex]);
+    }
+  }, 50);
+}
+
+typeRole(roles[currentIndex]);
